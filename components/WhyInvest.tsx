@@ -16,11 +16,11 @@ export function WhyInvest() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {investmentReasons.map((reason, idx) => (
-            <div key={idx} className="group border border-border-color p-4 sm:p-5 hover:border-gold-accent/40 hover:shadow-md transition-all duration-200">
-              <span className="text-gold-accent text-xl sm:text-2xl font-bold tracking-wider">
+            <div key={idx} className="group bg-white border-[3px] border-primary-navy p-5 sm:p-6 hover:border-gold-accent hover:shadow-md transition-all duration-200">
+              <span className="text-primary-navy text-2xl sm:text-3xl font-bold tracking-wider group-hover:text-gold-accent transition-colors">
                 {String(idx + 1).padStart(2, '0')}
               </span>
-              <h3 className="font-bold text-primary-navy text-sm sm:text-base mt-2 mb-1 leading-snug group-hover:text-gold-accent transition-colors">
+              <h3 className="font-bold text-primary-navy text-sm sm:text-base mt-3 mb-1.5 leading-snug group-hover:text-gold-accent transition-colors">
                 {reason.title}
               </h3>
               <p className="text-xs sm:text-[13px] text-secondary-text leading-relaxed">{reason.desc}</p>

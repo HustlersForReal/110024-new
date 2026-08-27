@@ -107,9 +107,9 @@ function PincodeBlocks() {
 function Headline() {
   return (
     <h1 className="text-3xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-6xl font-bold text-white mb-3 sm:mb-4 lg:mb-5 leading-[1.1] tracking-tight">
-      Your Trusted Partner in
+      LAJPAT KI LAAJ,
       <br />
-      <span className="text-gold-accent">South Delhi Real Estate</span>
+      <span className="text-gold-accent">DEFENCE KA TAAJ</span>
     </h1>
   );
 }
@@ -117,8 +117,8 @@ function Headline() {
 function Subtitle() {
   return (
     <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/70 max-w-[90%] sm:max-w-2xl mx-auto mb-5 sm:mb-7 lg:mb-8 leading-relaxed">
-      1,000+ families served across Lajpat Nagar, Defence Colony and the entire 110024.
-      Five decades of trust, one pincode of expertise.
+      Your Trusted South Delhi Real Estate Partner. Find your dream home or investment in Lajpat Nagar, Defence Colony, Amar Colony, and beyond.
+
     </p>
   );
 }

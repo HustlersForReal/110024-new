@@ -31,10 +31,10 @@ function ServiceCard({ service }: { service: typeof servicesData[number] }) {
       href={`https://api.whatsapp.com/send?phone=919100110024&text=${encodeURIComponent(`Hello 110024.com, ${service.message}`)}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex items-start gap-4 px-5 sm:px-6 py-5 sm:py-6 bg-white border-2 border-border-color hover:border-gold-accent/60 hover:shadow-lg transition-all duration-200 cursor-pointer"
+      className="group flex items-start gap-4 px-5 sm:px-6 py-5 sm:py-6 bg-white border-[3px] border-primary-navy hover:border-gold-accent hover:shadow-md transition-all duration-200 cursor-pointer"
     >
-      <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-light-navy flex items-center justify-center shrink-0 group-hover:bg-gold-accent/10 transition-colors">
-        <Icon className="w-5 h-5 text-gold-accent" />
+      <div className="w-11 h-11 rounded-lg bg-primary-navy flex items-center justify-center shrink-0 group-hover:bg-gold-accent transition-colors">
+        <Icon className="w-5 h-5 text-white group-hover:text-primary-navy transition-colors" />
       </div>
       <div className="min-w-0 pt-0.5">
         <h3 className="text-sm sm:text-base font-bold text-primary-navy mb-1 group-hover:text-gold-accent transition-colors leading-snug">
@@ -60,13 +60,14 @@ export function OurServices() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary-navy mb-4 sm:mb-6 tracking-tight leading-[1.1]">
             Actions Speaks Louder Than Words
           </h2>
-          <p className="text-secondary-text text-base sm:text-lg leading-relaxed mb-3">
+          <p className="text-secondary-text text-base sm:text-lg leading-relaxed">
             Whatever your property need is, we have got you covered. From beginning till the end every step with 110024.com is handled with care and total discretion.
           </p>
-          <p className="text-secondary-text text-sm sm:text-base">
-            Choose Your Specific Need From Our Services Mentioned Below.
-          </p>
         </div>
+
+        <p className="text-primary-navy font-bold text-sm sm:text-base mb-5 sm:mb-6">
+          Choose Your Specific Need From Our Services Mentioned Below.
+        </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
           {firstNine.map((service) => (

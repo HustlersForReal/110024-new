@@ -65,10 +65,10 @@ export function StrategicPartnerships() {
             return (
               <div
                 key={partner.slug}
-                className="group flex items-start gap-4 px-5 sm:px-6 py-5 sm:py-6 bg-white border-2 border-border-color transition-all duration-200"
+                className="group flex items-start gap-4 px-5 sm:px-6 py-5 sm:py-6 bg-white border-[3px] border-primary-navy hover:border-gold-accent hover:shadow-md transition-all duration-200"
               >
-                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-light-navy flex items-center justify-center shrink-0 group-hover:bg-gold-accent/10 transition-colors">
-                  <Icon className="w-5 h-5 text-gold-accent" />
+                <div className="w-11 h-11 rounded-lg bg-primary-navy flex items-center justify-center shrink-0 group-hover:bg-gold-accent transition-colors">
+                  <Icon className="w-5 h-5 text-white group-hover:text-primary-navy transition-colors" />
                 </div>
                 <div className="min-w-0 pt-0.5">
                   <h3 className="text-sm sm:text-base font-bold text-primary-navy mb-1 leading-snug">
