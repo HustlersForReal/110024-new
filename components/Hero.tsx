@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
-import { Search, MapPin, Building2, TrendingUp } from 'lucide-react';
+import { Search, MapPin, TrendingUp, Plus } from 'lucide-react';
 import { areaProfiles } from '@/lib/data';
 
 const locations = [
@@ -16,10 +16,10 @@ const locations = [
 ];
 
 const quickFilters = [
-  { label: 'Lajpat Nagar', icon: MapPin },
-  { label: 'Defence Colony', icon: MapPin },
-  { label: '2 BHK', icon: Building2 },
-  { label: 'Commercial', icon: TrendingUp },
+  { label: 'Defence Colony', icon: MapPin, slug: '/area/defence-colony' },
+  { label: 'National Park', icon: MapPin, slug: '/area/national-park' },
+  { label: 'Lajpat Nagar 3', icon: MapPin, slug: '/area/lajpat-nagar-3' },
+  { label: 'Circle Rates', icon: TrendingUp, slug: '/circle-rates' },
 ];
 
 export function Hero() {
@@ -270,22 +270,12 @@ function SearchSection() {
 function Chips() {
   const router = useRouter();
 
-  const handleClick = (label: string) => {
-    if (label === 'Lajpat Nagar') {
-      router.push('/area/lajpat-nagar-1');
-    } else if (label === 'Defence Colony') {
-      router.push('/area/defence-colony');
-    } else if (label === '2 BHK' || label === 'Commercial') {
-      document.getElementById('featured-properties')?.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-5 sm:mb-6 lg:mb-7 max-w-full px-1">
       {quickFilters.map((filter) => (
         <button
           key={filter.label}
-          onClick={() => handleClick(filter.label)}
+          onClick={() => router.push(filter.slug)}
           className="inline-flex items-center gap-1 sm:gap-1.5 px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 backdrop-blur-md text-white/70 hover:text-white text-[11px] sm:text-sm font-medium transition-all duration-200"
         >
           <filter.icon className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
@@ -294,9 +284,10 @@ function Chips() {
       ))}
       <span className="text-white/20 hidden sm:inline">|</span>
       <button
-        onClick={() => document.getElementById('featured-properties')?.scrollIntoView({ behavior: 'smooth' })}
-        className="inline-flex items-center gap-1 sm:gap-1.5 px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 backdrop-blur-md text-white/70 hover:text-white text-[11px] sm:text-sm font-medium transition-all duration-200"
+        onClick={() => router.push('/list-your-property')}
+        className="inline-flex items-center gap-1 sm:gap-1.5 px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-gold-accent/90 hover:bg-gold-accent border border-gold-accent text-primary-navy text-[11px] sm:text-sm font-semibold transition-all duration-200"
       >
+        <Plus className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
         List Your Property
       </button>
     </div>

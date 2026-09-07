@@ -50,6 +50,12 @@ export function Navbar() {
                 </div>
               )}
             </div>
+            <Link href="/circle-rates" className="text-sm font-semibold text-secondary-text hover:text-gold-accent transition-colors">
+              Circle Rates
+            </Link>
+            <Link href="/list-your-property" className="text-sm font-semibold text-secondary-text hover:text-gold-accent transition-colors">
+              List Your Property
+            </Link>
             <Link href="/exclusive-deals" className="text-sm font-semibold text-secondary-text hover:text-gold-accent transition-colors">
               Exclusive Deals
             </Link>
