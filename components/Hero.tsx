@@ -19,14 +19,14 @@ const quickFilters: never[] = [];
 
 export function Hero() {
   return (
-    <section className="relative w-full overflow-hidden min-h-[560px] sm:min-h-[600px] lg:min-h-[640px] lg:h-[calc(100svh-5rem)] flex items-center">
+    <section className="relative w-full overflow-hidden min-h-[500px] sm:min-h-[520px] lg:min-h-[720px] xl:min-h-[760px] flex items-center py-4 sm:py-6 lg:py-12">
       <video autoPlay loop muted playsInline preload="metadata" className="absolute inset-0 w-full h-full object-cover object-center">
-        <source src="https://res.cloudinary.com/s8hu1xkw/video/upload/v1788792922/Final_dtk5ic.mp4" type="video/mp4" />
+        <source src="https://res.cloudinary.com/s8hu1xkw/video/upload/v1789155623/EOK-FInal-compressed_yz0ahn.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/80" />
       <div className="absolute inset-0 bg-primary-navy/30" />
 
-      <div className="relative z-10 mx-auto flex h-full w-full max-w-7xl flex-col items-center justify-center px-4 py-10 sm:py-10 lg:py-8 text-center sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto flex h-full w-full max-w-7xl flex-col items-center justify-center px-4 py-4 sm:py-6 lg:py-6 text-center sm:px-6 lg:px-8">
         <PincodeBlocks />
         <Headline />
         <Subtitle />
@@ -78,7 +78,7 @@ function PincodeBlocks() {
   }, []);
 
   return (
-    <div className="flex items-center gap-1 xs:gap-1 sm:gap-1.5 md:gap-2 mb-3 sm:mb-4 lg:mb-5">
+    <div className="flex items-center gap-1 xs:gap-1 sm:gap-1.5 md:gap-2 mb-2 sm:mb-3">
       {digits.map((d, i) => (
         <div
           key={i}
@@ -101,7 +101,7 @@ function PincodeBlocks() {
 
 function Headline() {
   return (
-    <h1 className="text-[32px] xs:text-[34px] sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-6xl font-bold text-white mb-3 sm:mb-4 lg:mb-5 leading-[1.1] tracking-tight">
+    <h1 className="text-[32px] xs:text-[34px] sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-6xl font-bold text-white mb-2 sm:mb-3 leading-[1.1] tracking-tight">
       LAJPAT KI LAAJ,
       <br />
       <span className="text-gold-accent">DEFENCE KA TAAJ</span>
@@ -111,7 +111,7 @@ function Headline() {
 
 function Subtitle() {
   return (
-    <p className="text-[14px] sm:text-base md:text-lg lg:text-xl text-white/70 max-w-[90%] sm:max-w-2xl mx-auto mb-5 sm:mb-6 lg:mb-8 leading-relaxed px-2 sm:px-0">
+    <p className="text-[14px] sm:text-base md:text-lg lg:text-xl text-white/70 max-w-[90%] sm:max-w-2xl mx-auto mb-3.5 sm:mb-5 leading-relaxed px-2 sm:px-0">
       Your Trusted South Delhi Real Estate Partner. Find your dream home or investment in Lajpat Nagar, Defence Colony, Amar Colony, and beyond.
     </p>
   );
@@ -125,6 +125,9 @@ function SearchSection() {
   const [userInput, setUserInput] = useState('');
   const [suggestions, setSuggestions] = useState<typeof areaProfiles>([]);
   const lastIndex = useRef(-1);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const isFocusedRef = useRef(false);
+  const cycleRef = useRef(0);
 
   useEffect(() => {
     if (userInput.trim()) {
@@ -155,50 +158,78 @@ function SearchSection() {
     }
   };
 
-  const getRandomLocation = () => {
-    let index;
-    do {
-      index = Math.floor(Math.random() * locations.length);
-    } while (index === lastIndex.current);
-    lastIndex.current = index;
-    return locations[index];
-  };
+  // Placeholder typewriter: runs ONLY while blurred. Focus kills the loop
+  // instantly and clears text; blur restarts a fresh loop. This fixes the
+  // glitch where typing continued behind input or never resumed after blur.
+  useEffect(() => {
+    isFocusedRef.current = isFocused;
+    if (isFocused) {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+      setLocationText('');
+      return;
+    }
 
-  const animatePlaceholder = useCallback(() => {
-    const location = getRandomLocation();
-    let i = 0;
-    let deleting = false;
-    let timeout: ReturnType<typeof setTimeout>;
+    let cancelled = false;
+    const myCycle = ++cycleRef.current;
 
-    const type = () => {
-      if (isFocused) return;
-      if (!deleting) {
-        setLocationText(location.slice(0, i + 1));
-        i++;
-        if (i <= location.length) {
-          timeout = setTimeout(type, 40 + Math.random() * 30);
-        } else {
-          timeout = setTimeout(() => { deleting = true; type(); }, 2000);
-        }
-      } else {
-        setLocationText(location.slice(0, i));
-        i--;
-        if (i >= 0) {
-          timeout = setTimeout(type, 20);
-        } else {
-          timeout = setTimeout(animatePlaceholder, 300);
-        }
-      }
+    const schedule = (fn: () => void, ms: number) => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      timeoutRef.current = setTimeout(() => {
+        if (!cancelled && myCycle === cycleRef.current) fn();
+      }, ms);
     };
 
-    type();
-    return () => clearTimeout(timeout);
-  }, [isFocused]);
+    const pickLocation = () => {
+      let index = Math.floor(Math.random() * locations.length);
+      if (locations.length > 1) {
+        while (index === lastIndex.current) {
+          index = Math.floor(Math.random() * locations.length);
+        }
+      }
+      lastIndex.current = index;
+      return locations[index];
+    };
 
-  useEffect(() => {
-    const cleanup = animatePlaceholder();
-    return cleanup;
-  }, [animatePlaceholder]);
+    const runCycle = () => {
+      if (cancelled || myCycle !== cycleRef.current || isFocusedRef.current) return;
+      const location = pickLocation();
+      let i = 0;
+      let deleting = false;
+
+      const type = () => {
+        if (cancelled || myCycle !== cycleRef.current || isFocusedRef.current) return;
+        if (!deleting) {
+          setLocationText(location.slice(0, i + 1));
+          i++;
+          if (i <= location.length) {
+            schedule(type, 40 + Math.random() * 30);
+          } else {
+            schedule(() => { deleting = true; type(); }, 2000);
+          }
+        } else {
+          setLocationText(location.slice(0, i));
+          i--;
+          if (i >= 0) {
+            schedule(type, 20);
+          } else {
+            schedule(runCycle, 400);
+          }
+        }
+      };
+
+      type();
+    };
+
+    // Small delay so blur→placeholder doesn't flash mid-transition.
+    schedule(runCycle, 250);
+
+    return () => {
+      cancelled = true;
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    };
+  }, [isFocused]);
 
   useEffect(() => {
     const interval = setInterval(() => setCursorVisible((v) => !v), 530);
@@ -206,11 +237,11 @@ function SearchSection() {
   }, []);
 
   return (
-    <div className="w-full max-w-[92%] xs:max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl mb-3.5 lg:mb-4">
+    <div className="w-full max-w-[92%] xs:max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl mb-2.5 sm:mb-3">
       <div className="relative">
-        <div className="bg-white rounded-2xl shadow-[0_8px_40px_rgba(0,0,0,0.3)] p-1.5 sm:p-2 flex flex-col sm:flex-row items-stretch gap-1.5 sm:gap-2">
-          <div className="relative flex-grow flex items-center gap-2 sm:gap-3 bg-light-navy/60 px-3.5 sm:px-5 py-3.5 sm:py-4 rounded-xl min-w-0">
-            <Search className="w-[18px] h-[18px] sm:w-5 sm:h-5 text-secondary-text shrink-0 relative z-10" />
+        <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-[0_8px_40px_rgba(0,0,0,0.35)] p-1.5 sm:p-2 flex flex-col sm:flex-row items-stretch gap-1.5 sm:gap-2">
+          <div className="relative flex-grow flex items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-md px-3.5 sm:px-5 py-3.5 sm:py-4 rounded-xl min-w-0 border border-white/10">
+            <Search className="w-[18px] h-[18px] sm:w-5 sm:h-5 text-white/70 shrink-0 relative z-10" />
             <input
               type="text"
               value={userInput}
@@ -218,14 +249,14 @@ function SearchSection() {
               onFocus={() => setIsFocused(true)}
               onBlur={() => setTimeout(() => setIsFocused(false), 200)}
               onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
-              className="absolute inset-0 w-full h-full bg-transparent border-none outline-none text-primary-navy px-3 sm:px-5 pl-[42px] sm:pl-[52px] py-3.5 sm:py-4 text-[15px] sm:text-base z-20 caret-primary-navy"
+              className="absolute inset-0 w-full h-full bg-transparent border-none outline-none text-white px-3 sm:px-5 pl-[42px] sm:pl-[52px] py-3.5 sm:py-4 text-[15px] sm:text-base z-20 caret-white placeholder:text-white/40"
             />
             {!userInput && !isFocused && (
               <span className="absolute left-[42px] sm:left-[52px] right-3 top-1/2 -translate-y-1/2 text-[15px] sm:text-base pointer-events-none z-10 whitespace-nowrap overflow-hidden text-ellipsis text-left">
-                <span className="text-secondary-text/60">Search For </span>
-                <span className="text-primary-navy">{locationText}</span>
+                <span className="text-white/50">Search For </span>
+                <span className="text-white">{locationText}</span>
                 <span
-                  className={`inline-block w-[2px] h-[18px] sm:h-5 bg-primary-navy/70 ml-[1px] align-middle ${
+                  className={`inline-block w-[2px] h-[18px] sm:h-5 bg-white/70 ml-[1px] align-middle ${
                     cursorVisible ? 'opacity-100' : 'opacity-0'
                   }`}
                 />
@@ -234,7 +265,7 @@ function SearchSection() {
           </div>
           <button
             onClick={handleSearch}
-            className="bg-primary-navy hover:bg-gold-accent text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-semibold text-[15px] sm:text-base transition-all duration-300 whitespace-nowrap shadow-md hover:shadow-lg w-full sm:w-auto"
+            className="bg-gold-accent hover:bg-white text-primary-navy px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-semibold text-[15px] sm:text-base transition-all duration-300 whitespace-nowrap shadow-md hover:shadow-lg w-full sm:w-auto"
           >
             Search
           </button>
@@ -264,7 +295,7 @@ function SearchSection() {
 function Chips() {
   const router = useRouter();
   return (
-    <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-5 sm:mb-6 lg:mb-7 max-w-full px-1">
+    <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-3.5 sm:mb-5 max-w-full px-1">
       <button
         onClick={() => router.push('/circle-rates')}
         className="inline-flex items-center gap-1.5 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 backdrop-blur-md text-white/70 hover:text-white text-xs sm:text-sm font-medium transition-all duration-200"
@@ -292,7 +323,7 @@ function Stats() {
   ];
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-x-3 gap-y-5 sm:gap-6 md:gap-10 pt-5 sm:pt-6 mt-1 border-t border-white/20 w-full max-w-[92%] xs:max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-x-3 gap-y-4 sm:gap-6 md:gap-10 pt-4 sm:pt-5 mt-1 border-t border-white/20 w-full max-w-[92%] xs:max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl">
       {stats.map((stat) => (
         <div key={stat.label} className="text-center">
           <div className="text-[26px] xs:text-[28px] sm:text-3xl md:text-4xl lg:text-[2.75rem] font-extrabold text-gold-accent drop-shadow-lg">

@@ -8,6 +8,13 @@
   --color-primary-text: #172033;
   --color-secondary-text: #5F6877;
   --color-border-color: #E5E7EB;
+  --color-primary: #14213D;
+  --color-primary-dark: #0f1a2e;
+  --color-page-bg: #f3f6fa;
+  --color-panel-bg: #ffffff;
+  --color-off-white: #f3f6fa;
+  --color-muted: #5F6877;
+  --color-footer-bg: #f3f6fa;
 
   --breakpoint-xs: 480px;
 }

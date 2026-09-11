@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import { Navbar } from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: '110024.com - The Home of Real Estate in 110024',
@@ -15,6 +16,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         <main className="flex-grow">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );
