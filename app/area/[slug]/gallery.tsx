@@ -4,33 +4,6 @@ import { useState, useEffect, useCallback } from 'react';
 import { X, ChevronLeft, ChevronRight, ImageOff, Camera, Eye } from 'lucide-react';
 import { blockImages } from '@/lib/block-images';
 
-const folderMap: Record<string, string> = {
-  'defence-colony': 'Defence Colony',
-  'lajpat-nagar-1': 'Lajpat Nagar 1',
-  'lajpat-nagar-2': 'Lajpat Nagar 2',
-  'lajpat-nagar-3': 'Lajpat Nagar 3',
-  'lajpat-nagar-4': 'Lajpat Nagar 4',
-  'feroze-gandhi-road': 'Feroze Gandhi Road',
-  'ring-road': 'Ring Road',
-  'national-park': 'National Park',
-  'vikram-vihar': 'Vikram Vihar',
-  'amar-colony': 'Amar Colony',
-  'dayanand-colony': 'Dayanand Colony',
-  'double-storey': 'Double Storey',
-  'old-double-storey': 'Old Double Storey',
-  'nirmal-puri': 'Nirmal Puri',
-  'vinoba-puri': 'Vinoba Puri',
-  'kasturba-niketan': 'Kasturba Niketan',
-  'jal-vihar': 'Jal Vihar',
-  'gulabi-bagh-railway-colony': 'Gulabi Bagh Railway Colony',
-  'central-market': 'Central Market',
-  '3cs-mall': "3C's Mall",
-  'defence-colony-c-block-market': 'Defence Colony C Block Market',
-  'krishna-market': 'Krishna Market',
-  'amar-colony-market': 'Amar Colony Market',
-  'gupta-market': 'Gupta Market',
-};
-
 export function AreaGallery({ slug, name }: { slug: string; name: string }) {
   const images = blockImages[slug] || [];
   const [active, setActive] = useState<number | null>(null);
@@ -39,8 +12,7 @@ export function AreaGallery({ slug, name }: { slug: string; name: string }) {
 
   const perPage = 3;
   const totalPages = Math.ceil(images.length / perPage);
-  const folder = folderMap[slug] || slug;
-  const getSrc = (filename: string) => `/110024-images/${encodeURIComponent(folder)}/${encodeURIComponent(filename)}`;
+  const getSrc = (filename: string) => `/110024-images/${slug}/${filename}`;
 
   const nextPage = useCallback(() => setPage((p) => (p + 1) % totalPages), [totalPages]);
   const prevPage = useCallback(() => setPage((p) => (p - 1 + totalPages) % totalPages), [totalPages]);
