@@ -9,7 +9,9 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: false,
   },
   // Allow access to remote image placeholder.
+  // unoptimized: Cloudflare Pages has no Image Optimization API, so serve images directly.
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',

@@ -23,7 +23,7 @@ export const blogs: Blog[] = [
     title: 'Circle Rates in 110024: What Defence Colony and Lajpat Nagar Buyers Actually Pay',
     category: 'Market Trends',
     date: 'August 12, 2026',
-    image: '/110024-images/Defence%20Colony/001.jpeg',
+    image: '/110024-images/Defence Colony/001.jpeg',
     excerpt:
       'Defence Colony sits in Category B at Rs 2.46 lakh per sq m while Lajpat Nagar sits in Category C at Rs 1.60 lakh. Here is how Delhi\u2019s circle-rate system really works — and what it adds to your stamp-duty bill.',
     readTime: '9 min read',
@@ -77,7 +77,7 @@ export const blogs: Blog[] = [
     title: 'Lajpat Nagar at 75: From Partition Refugee Colony to South Delhi\u2019s Commercial Heart',
     category: 'Locality Guide',
     date: 'July 28, 2026',
-    image: '/110024-images/Lajpat%20Nagar%203/001.jpeg',
+    image: '/110024-images/Lajpat Nagar 3/001.jpeg',
     excerpt:
       'Built in 1951 on Zamrudpur village land for Partition refugees, named after Lala Lajpat Rai — how 100 sq yd barracks became one of South Delhi\u2019s most expensive postcodes.',
     readTime: '10 min read',
@@ -128,7 +128,7 @@ export const blogs: Blog[] = [
     title: 'Builder Floors in 110024: Stilt+4, FAR and What to Check Before You Buy',
     category: 'Buying Guide',
     date: 'June 15, 2026',
-    image: '/110024-images/Amar%20Colony/001.jpeg',
+    image: '/110024-images/Amar Colony/001.jpeg',
     excerpt:
       'Delhi allows stilt parking plus four floors up to 17.5 metres. But FAR slabs, dwelling-unit caps and sanctioned plans decide what you can actually own — a practical checklist for 110024 buyers.',
     readTime: '9 min read',
