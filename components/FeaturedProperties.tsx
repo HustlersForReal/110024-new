@@ -193,7 +193,7 @@ export function FeaturedProperties() {
               Available Properties Right Now
             </h2>
             <p className="text-secondary-text text-base sm:text-lg">
-              Handpicked properties currently available across Pincode 110024. Found your match? Get in touch.
+              Handpicked properties currently available across Pincode 110024. Found your match? Click the "I Am Interested" button to get in touch.
             </p>
           </div>
           <div className="flex gap-2 shrink-0">

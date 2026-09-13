@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { MapPin } from 'lucide-react';
+import { MapPin, ArrowRight } from 'lucide-react';
 import { areaProfiles } from '@/lib/data';
 
 export function Explore110024() {
@@ -11,9 +11,9 @@ export function Explore110024() {
     <section id="explore" className="py-14 sm:py-20 md:py-24 lg:py-32 bg-light-navy/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-10 sm:mb-14">
-          <span className="text-gold-accent font-semibold tracking-widest uppercase text-[11px] sm:text-xs mb-3 sm:mb-4 block">Neighbourhoods</span>
+          {/* <span className="text-gold-accent font-semibold tracking-widest uppercase text-[11px] sm:text-xs mb-3 sm:mb-4 block">Neighbourhoods</span> */}
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary-navy mb-3 sm:mb-4 tracking-tight">
-            Explore 110024
+            Explore Pincode 110024
           </h2>
           <p className="text-secondary-text text-base sm:text-lg">
             Discover the neighbourhoods, markets and residential pockets that make 110024 unique.
@@ -35,7 +35,7 @@ export function Explore110024() {
                   <div className="w-10 h-10 rounded-lg bg-primary-navy flex items-center justify-center shrink-0 group-hover:bg-gold-accent transition-colors">
                     <MapPin className="w-5 h-5 text-white group-hover:text-primary-navy transition-colors" />
                   </div>
-                  <div className="min-w-0">
+                  <div className="min-w-0 flex-1">
                     <span className="text-sm sm:text-base font-semibold text-primary-navy leading-tight block group-hover:text-gold-accent transition-colors">
                       {area.name}
                     </span>
@@ -43,6 +43,7 @@ export function Explore110024() {
                       {area.tagline}
                     </span>
                   </div>
+                  <ArrowRight className="w-5 h-5 text-secondary-text/40 group-hover:text-gold-accent group-hover:translate-x-1 transition-all shrink-0" />
                 </Link>
               ))}
             </div>
@@ -62,7 +63,7 @@ export function Explore110024() {
                   <div className="w-10 h-10 rounded-lg bg-primary-navy flex items-center justify-center shrink-0 group-hover:bg-gold-accent transition-colors">
                     <MapPin className="w-5 h-5 text-white group-hover:text-primary-navy transition-colors" />
                   </div>
-                  <div className="min-w-0">
+                  <div className="min-w-0 flex-1">
                     <span className="text-sm sm:text-base font-semibold text-primary-navy leading-tight block group-hover:text-gold-accent transition-colors">
                       {area.name}
                     </span>
@@ -70,6 +71,7 @@ export function Explore110024() {
                       {area.tagline}
                     </span>
                   </div>
+                  <ArrowRight className="w-5 h-5 text-secondary-text/40 group-hover:text-gold-accent group-hover:translate-x-1 transition-all shrink-0" />
                 </Link>
               ))}
             </div>
@@ -89,7 +91,7 @@ export function Explore110024() {
                   <div className="w-10 h-10 rounded-lg bg-primary-navy flex items-center justify-center shrink-0 group-hover:bg-gold-accent transition-colors">
                     <MapPin className="w-5 h-5 text-white group-hover:text-primary-navy transition-colors" />
                   </div>
-                  <div className="min-w-0">
+                  <div className="min-w-0 flex-1">
                     <span className="text-sm sm:text-base font-semibold text-primary-navy leading-tight block group-hover:text-gold-accent transition-colors">
                       {area.name}
                     </span>
@@ -97,6 +99,7 @@ export function Explore110024() {
                       {area.tagline}
                     </span>
                   </div>
+                  <ArrowRight className="w-5 h-5 text-secondary-text/40 group-hover:text-gold-accent group-hover:translate-x-1 transition-all shrink-0" />
                 </Link>
               ))}
             </div>

@@ -450,42 +450,42 @@ export const servicesData = [
   },
   {
     slug: "liaisoning",
-    title: "I need Liaisoning Assistance",
+    title: "I Need Liaisoning Assistance",
     description: "From completion certificate to getting the property freehold.",
     icon: "FileCheck",
     message: "I need liaisoning assistance",
   },
   {
     slug: "deeds-registration",
-    title: "All Deeds Registration",
+    title: "I Need Property Deed Registration",
     description: "From sale deed to gift deed, from will to relinquishment deed.",
     icon: "FileSignature",
     message: "I need help with deeds registration",
   },
   {
     slug: "authority-connection",
-    title: "All Authority Connection",
-    description: "From MCD to DDA, from sub-registrar office to L&DO.",
+    title: "I Need MCD, DDA & Govt. Approvals",
+    description: "NOCs, approvals and paperwork across MCD, DDA, sub-registrar office and L&DO.",
     icon: "Landmark",
-    message: "I need help with authority connections",
+    message: "I need help with MCD, DDA and government approvals",
   },
   {
     slug: "renovation",
-    title: "I want Renovation Assistance",
+    title: "I Need Renovation Assistance",
     description: "From renovation to vastu consultation.",
     icon: "Hammer",
     message: "I need renovation assistance",
   },
   {
     slug: "relocation",
-    title: "I want Relocation Assistance",
+    title: "I Need Relocation Assistance",
     description: "From relocation to new home settlement.",
     icon: "Truck",
     message: "I need relocation assistance",
   },
   {
     slug: "loan-tax",
-    title: "I want Loan / Tax Assistance",
+    title: "I Need Loan / Tax Assistance",
     description: "From taking a loan to paying the capital gain tax.",
     icon: "Wallet",
     message: "I need loan or tax assistance",
@@ -582,7 +582,11 @@ export const investmentReasons = [
   { title: "Premium Neighbourhoods", desc: "Home to sought-after areas like Defence Colony." },
   { title: "Major Markets Nearby", desc: "Walking distance to Central Market, Defence Colony Market, etc." },
   { title: "Schools & Healthcare", desc: "Proximity to top-tier educational institutions and hospitals." },
-  { title: "Long-term Investment", desc: "Historically proven capital appreciation and stable rental yields." }
+  { title: "Long-term Investment", desc: "Historically proven capital appreciation and stable rental yields." },
+  { title: "All Ages, All Seasons", desc: "Playfulness for children, mindfulness for teenagers, vibrancy for youngsters, and peacefulness for the elderly." },
+  { title: "Every Facility, At Your Door", desc: "Wide roads, cleanliness, dense parks, and reliable connectivity — the basics are always covered." },
+  { title: "Metro, Schools & Markets", desc: "Metro stations, top schools, leading hospitals, restaurants, and bustling markets — everything nearby." },
+  { title: "More Than Home — An Achievement", desc: "Owning a property here gives comfort, guarantees higher returns, and secures your financial future." }
 ];
 
 export const articles = [

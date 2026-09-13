@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { ChevronDown, Menu, X, Home, MapPin, Plus, BarChart3, Star, Info, Camera } from 'lucide-react';
@@ -18,10 +19,18 @@ export function Navbar() {
   return (
     <>
       <header className="sticky top-0 z-50 w-full bg-white border-b border-border-color">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
           <div className="flex items-center gap-6 sm:gap-8">
-            <Link href="/" className="flex items-center gap-2">
-              <span className="text-xl sm:text-2xl font-bold tracking-tight text-primary-navy">
+            <Link href="/" className="flex items-center gap-0.5 shrink-0">
+              <Image
+                src="/logo-11.png"
+                alt="110024.com logo"
+                width={112}
+                height={112}
+                className="h-24 w-24 sm:h-28 sm:w-28 object-contain -my-4 sm:-my-5 shrink-0"
+                priority
+              />
+              <span className="-ml-2 sm:-ml-3 text-xl sm:text-2xl font-bold tracking-tight text-primary-navy">
                 110024<span className="text-gold-accent">.com</span>
               </span>
             </Link>
@@ -68,7 +77,7 @@ export function Navbar() {
       {/* Overlay + Drawer — full width, top-down */}
       <div className={`fixed inset-0 z-40 lg:hidden transition-opacity duration-300 ${mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
         <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" onClick={() => setMobileOpen(false)} />
-        <div className={`absolute top-16 sm:top-20 left-0 right-0 bottom-0 bg-white shadow-2xl overflow-y-auto transition-transform duration-300 ease-out ${mobileOpen ? 'translate-y-0' : '-translate-y-full'}`}>
+        <div className={`absolute top-20 sm:top-24 left-0 right-0 bottom-0 bg-white shadow-2xl overflow-y-auto transition-transform duration-300 ease-out ${mobileOpen ? 'translate-y-0' : '-translate-y-full'}`}>
           <nav className="px-3 py-4 space-y-1">
             <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-3 px-3 py-3 text-sm font-semibold text-primary-navy hover:bg-light-navy rounded-xl transition-colors"><Home className="w-4 h-4 text-gold-accent" /> Home</Link>
             <button onClick={() => setMobileExplore(!mobileExplore)} className="w-full flex items-center justify-between px-3 py-3 text-sm font-semibold text-secondary-text hover:bg-light-navy rounded-xl transition-colors">

@@ -39,7 +39,7 @@ export default function CircleRatesPage() {
       </section>
 
       {/* Search */}
-      <section className="bg-white border-b border-border-color sticky top-16 sm:top-20 z-30">
+      <section className="bg-white border-b border-border-color sticky top-20 sm:top-24 z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
           <div className="flex flex-col xs:flex-row gap-3 xs:items-center justify-between">
             <div className="relative flex-1 xs:max-w-[320px] sm:max-w-[360px]">

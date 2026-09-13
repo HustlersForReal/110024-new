@@ -435,7 +435,7 @@ export function FooterFinal({
 
         {/* ── Bottom Bar ── */}
         <div className="bg-[#0A1628] w-full py-5 px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-white/10">
-          <p className="font-sans text-white text-[10px] sm:text-xs tracking-wide order-2 sm:order-1">&copy; 2026 110024.com &middot; All Rights Reserved</p>
+          <p className="font-sans text-white text-[10px] sm:text-xs tracking-wide order-2 sm:order-1">110024.com &copy; 2026 &middot; All Rights Reserved</p>
           <p className="font-sans font-medium text-xs sm:text-sm order-1 sm:order-2 text-white">
             <span className="mr-2 text-white">Incredible</span>
             <span style={{ color: "#FF9933" }}>In</span>

@@ -16,12 +16,12 @@ export default function Home() {
     <>
       <Hero />
       <FeaturedProperties />
+      <OriginOfPincode />
       <Explore110024 />
       <OurServices />
       <SaveMyMoney />
       <StrategicPartnerships />
       <StoryOf110024 />
-      <OriginOfPincode />
       <WhyInvest />
       <TrustStats />
       <Insights />

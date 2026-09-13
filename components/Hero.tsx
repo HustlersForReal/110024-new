@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
-import { Search, MapPin, TrendingUp, Plus } from 'lucide-react';
+import { Search, MapPin, Briefcase, Plus } from 'lucide-react';
 import { areaProfiles } from '@/lib/data';
 import { ServicesMarquee } from './ServicesMarquee';
 
@@ -20,7 +20,7 @@ const quickFilters: never[] = [];
 
 export function Hero() {
   return (
-    <section className="relative w-full overflow-hidden min-h-[calc(100svh-4rem)] sm:min-h-[calc(100svh-5rem)] flex flex-col justify-between items-center pt-4 sm:pt-6 lg:pt-8 pb-0">
+    <section className="relative w-full overflow-hidden min-h-[calc(100svh-5rem)] sm:min-h-[calc(100svh-6rem)] flex flex-col justify-between items-center pt-4 sm:pt-6 lg:pt-8 pb-0">
       <video autoPlay loop muted playsInline preload="metadata" className="absolute inset-0 w-full h-full object-cover object-center">
         <source src="https://res.cloudinary.com/s8hu1xkw/video/upload/v1789155673/24Final-compressed_jrkppd.mp4" type="video/mp4" />
       </video>
@@ -116,7 +116,7 @@ function Headline() {
 function Subtitle() {
   return (
     <p className="text-[14px] sm:text-base md:text-lg lg:text-xl text-white/70 max-w-[90%] sm:max-w-2xl mx-auto mb-3.5 sm:mb-5 leading-relaxed px-2 sm:px-0">
-      Your Trusted South Delhi Real Estate Partner. Find your dream home or investment in Lajpat Nagar, Defence Colony, Amar Colony, and beyond.
+      Your Trusted Real Estate Platform For Property Deals & End-To-End Property Services in Lajpat Nagar & Defence Colony.
     </p>
   );
 }
@@ -294,18 +294,18 @@ function Chips() {
   return (
     <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-3.5 sm:mb-5 max-w-full px-1">
       <button
-        onClick={() => router.push('/circle-rates')}
-        className="inline-flex items-center gap-1.5 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 backdrop-blur-md text-white/70 hover:text-white text-xs sm:text-sm font-medium transition-all duration-200"
-      >
-        <TrendingUp className="w-3.5 h-3.5" />
-        Circle Rates
-      </button>
-      <button
         onClick={() => router.push('/list-your-property')}
         className="inline-flex items-center gap-1.5 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-gold-accent hover:bg-gold-accent/90 border border-gold-accent text-primary-navy text-xs sm:text-sm font-semibold transition-all duration-200"
       >
         <Plus className="w-3.5 h-3.5" />
         List Your Property
+      </button>
+      <button
+        onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+        className="inline-flex items-center gap-1.5 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 backdrop-blur-md text-white/70 hover:text-white text-xs sm:text-sm font-medium transition-all duration-200"
+      >
+        <Briefcase className="w-3.5 h-3.5" />
+        Explore Services
       </button>
     </div>
   );
