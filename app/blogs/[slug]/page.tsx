@@ -5,6 +5,8 @@ import { notFound } from 'next/navigation';
 import { ArrowRight, ArrowLeft, CalendarDays, Clock } from 'lucide-react';
 import { blogs, type BlogBlock } from '@/lib/blogs';
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return blogs.map((blog) => ({ slug: blog.slug }));
 }

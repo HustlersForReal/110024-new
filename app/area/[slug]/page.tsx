@@ -5,6 +5,8 @@ import { areaProfiles } from '@/lib/data';
 import { AreaGallery } from './gallery';
 import type { Metadata } from 'next';
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return areaProfiles.map((area) => ({
     slug: area.slug,
