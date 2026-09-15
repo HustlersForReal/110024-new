@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, Target, Users, Award, Shield, TrendingUp, Handshake, CheckCircle2 } from 'lucide-react';
+import { WhatsAppLink } from '@/components/WhatsAppLink';
 
 export const metadata: Metadata = {
   title: 'About Us - 110024.com',
@@ -196,9 +197,9 @@ export default function AboutPage() {
               Explore Properties
               <ArrowRight className="w-4 h-4" />
             </Link>
-            <a href="https://api.whatsapp.com/send?phone=919100110024&text=Hello%20110024.com%2C%20I%20want%20to%20know%20more%20about%20your%20services" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white/20 text-white hover:border-white/40 hover:bg-white/5 px-8 sm:px-10 py-3.5 sm:py-4 text-sm font-semibold uppercase tracking-wider transition-all duration-300">
+            <WhatsAppLink message="Hello 110024.com, I want to know more about your services" className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white/20 text-white hover:border-white/40 hover:bg-white/5 px-8 sm:px-10 py-3.5 sm:py-4 text-sm font-semibold uppercase tracking-wider transition-all duration-300">
               Talk to an Expert
-            </a>
+            </WhatsAppLink>
           </div>
         </div>
       </section>

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { animate, motion, useMotionValue } from 'motion/react';
 import { MapPin, ArrowRight, Flame, Ruler, BedDouble, Building2, ChevronLeft, ChevronRight } from 'lucide-react';
 import { liveDemands, type LiveDemand } from '@/lib/live-demand';
+import { WhatsAppLink } from './WhatsAppLink';
 
 const WHATSAPP_NUMBER = '919100110024';
 
@@ -43,7 +44,7 @@ function DemandCard({ demand, index }: { demand: LiveDemand; index: number }) {
     `Location: ${demand.location}${demand.block ? `, ${demand.block}` : ''}, 110024`,
     demand.tags.length > 0 ? `Highlights: ${demand.tags.join(', ')}` : '',
   ].filter((l) => l !== '');
-  const url = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(messageLines.join('\n'))}`;
+  const message = messageLines.join('\n');
 
   return (
     <div className="group bg-white border border-border-color p-5 sm:p-6 flex flex-col h-full hover:border-gold-accent/40 hover:shadow-md transition-all duration-200">
@@ -107,15 +108,14 @@ function DemandCard({ demand, index }: { demand: LiveDemand; index: number }) {
         </div>
       )}
 
-      <a
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
+      <WhatsAppLink
+        message={message}
+        phone={WHATSAPP_NUMBER}
         className="mt-auto w-full flex items-center justify-center gap-2 bg-primary-navy hover:bg-gold-accent text-white hover:text-primary-navy py-3 text-xs font-semibold transition-all duration-300 uppercase tracking-wider"
       >
         I Am Interested
         <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-      </a>
+      </WhatsAppLink>
     </div>
   );
 }

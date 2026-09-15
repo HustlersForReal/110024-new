@@ -2,6 +2,7 @@
 
 import { Home as HomeIcon, BadgeIndianRupee, Key, Users, Globe, FileCheck, FileSignature, Landmark, Hammer, Truck, Wallet, Handshake, Scale, PenLine, Ruler, Building2, HardHat, Briefcase, ArrowRight } from 'lucide-react';
 import { servicesData } from '@/lib/data';
+import { WhatsAppLink } from './WhatsAppLink';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Home: HomeIcon,
@@ -27,10 +28,8 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 function ServiceCard({ service }: { service: typeof servicesData[number] }) {
   const Icon = iconMap[service.icon] || HomeIcon;
   return (
-    <a
-      href={`https://api.whatsapp.com/send?phone=919100110024&text=${encodeURIComponent(`Hello 110024.com, ${service.message}`)}`}
-      target="_blank"
-      rel="noopener noreferrer"
+    <WhatsAppLink
+      message={`Hello 110024.com, ${service.message}`}
       className="group flex items-start gap-4 px-5 sm:px-6 py-5 sm:py-6 bg-white border-[3px] border-primary-navy hover:border-gold-accent hover:shadow-md transition-all duration-200 cursor-pointer"
     >
       <div className="w-11 h-11 rounded-lg bg-primary-navy flex items-center justify-center shrink-0 group-hover:bg-gold-accent transition-colors">
@@ -45,7 +44,7 @@ function ServiceCard({ service }: { service: typeof servicesData[number] }) {
         </p>
       </div>
       <ArrowRight className="w-5 h-5 text-secondary-text/40 group-hover:text-gold-accent group-hover:translate-x-1 transition-all shrink-0 self-center" />
-    </a>
+    </WhatsAppLink>
   );
 }
 

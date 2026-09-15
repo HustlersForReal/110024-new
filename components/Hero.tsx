@@ -108,7 +108,7 @@ function Headline() {
     <h1 className="text-4xl xs:text-[38px] sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-2 sm:mb-3 leading-[1.1] tracking-tight">
       LAJPAT KI LAAJ,
       <br />
-      <span className="text-gold-accent">DEFENCE KA TAAJ</span>
+      <span className="text-gold-accent">DEFENCE KA TAJ</span>
     </h1>
   );
 }

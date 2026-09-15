@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from 'react';
 import { Send } from 'lucide-react';
+import { getReferralUrl, getReferralMessage } from '@/lib/referral-storage';
 
 export function ExclusiveDealsForm() {
   const [name, setName] = useState('');
@@ -13,7 +14,7 @@ export function ExclusiveDealsForm() {
     if (!name.trim() || !phone.trim()) return;
 
     const message = `Hi, I'm interested in Exclusive Deals.\n\nName: ${name}\nPhone: ${phone}`;
-    const url = `https://api.whatsapp.com/send?phone=919100110024&text=${encodeURIComponent(message)}`;
+    const url = getReferralUrl(`https://api.whatsapp.com/send?phone=919100110024&text=${encodeURIComponent(getReferralMessage(message))}`);
     window.open(url, '_blank');
     setSubmitted(true);
   };
