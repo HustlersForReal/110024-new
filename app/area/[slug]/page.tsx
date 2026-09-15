@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { ArrowLeft, ArrowRight, ArrowUpRight, MapPin, TrendingUp, Phone } from 'lucide-react';
 import { areaProfiles } from '@/lib/data';
 import { AreaGallery } from './gallery';
+import { WhatsAppLink } from '@/components/WhatsAppLink';
 import type { Metadata } from 'next';
 
 export const dynamicParams = false;
@@ -97,13 +98,13 @@ export default async function AreaPage({
             </div>
 
             <div className="shrink-0">
-              <a
-                href="#"
+              <WhatsAppLink
+                message={`Hello 110024.com, I want to talk to an expert about ${area.name}, 110024.`}
                 className="inline-flex items-center gap-2 bg-white/10 hover:bg-gold-accent hover:text-primary-navy text-white border border-white/15 px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold uppercase tracking-wider transition-all duration-300 backdrop-blur-sm"
               >
                 <Phone className="w-4 h-4" />
                 Talk to an Expert
-              </a>
+              </WhatsAppLink>
             </div>
           </div>
         </div>
@@ -172,13 +173,13 @@ export default async function AreaPage({
                   <p className="text-secondary-text text-sm mb-5 leading-relaxed">
                     Get expert advice on properties and investment opportunities in this area.
                   </p>
-                  <a
-                    href="#"
+                  <WhatsAppLink
+                    message={`Hello 110024.com, I am interested in ${area.name}, 110024.`}
                     className="w-full flex items-center justify-center gap-2 bg-primary-navy hover:bg-gold-accent text-white hover:text-primary-navy py-3 text-sm font-semibold transition-all duration-300 uppercase tracking-wider"
                   >
                     Get in Touch
                     <ArrowUpRight className="w-4 h-4" />
-                  </a>
+                  </WhatsAppLink>
                 </div>
               </div>
             </div>
