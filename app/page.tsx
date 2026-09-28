@@ -3,10 +3,12 @@ import { FeaturedProperties } from '@/components/FeaturedProperties';
 import { Explore110024 } from '@/components/Explore110024';
 import { OurServices } from '@/components/OurServices';
 import { SaveMyMoney } from '@/components/SaveMyMoney';
-import { StrategicPartnerships } from '@/components/StrategicPartnerships';
+// TODO: re-enable. Section is temporarily hidden on the homepage.
+// import { StrategicPartnerships } from '@/components/StrategicPartnerships';
 import { StoryOf110024 } from '@/components/StoryOf110024';
 import { OriginOfPincode } from '@/components/OriginOfPincode';
 import { WhyInvest } from '@/components/WhyInvest';
+import { CalculatorsSection } from '@/components/CalculatorsSection';
 import { TrustStats } from '@/components/TrustStats';
 import { Insights } from '@/components/Insights';
 import { FinalCTA } from '@/components/FinalCTA';
@@ -20,9 +22,10 @@ export default function Home() {
       <Explore110024 />
       <OurServices />
       <SaveMyMoney />
-      <StrategicPartnerships />
+      {/* <StrategicPartnerships /> */}
       <StoryOf110024 />
       <WhyInvest />
+      <CalculatorsSection />
       <TrustStats />
       <Insights />
       <FinalCTA />

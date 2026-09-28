@@ -67,7 +67,7 @@ export default function ExclusiveDealsPage() {
 
             {/* Right Form */}
             <div className="lg:col-span-5">
-              <div className="bg-primary-navy text-white p-6 sm:p-8 sticky top-24">
+              <div className="bg-primary-navy text-white p-6 sm:p-8 sticky top-[4.5rem] sm:top-20 lg:top-24">
                 <h2 className="text-xl sm:text-2xl font-bold mb-2">Just Share Your Details</h2>
                 <p className="text-light-navy/60 text-sm mb-6 sm:mb-8">Then Sit, Relax &amp; Enjoy The Game.</p>
                 <ExclusiveDealsForm />

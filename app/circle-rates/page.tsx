@@ -33,7 +33,7 @@ export default function CircleRatesPage() {
             <span className="text-gold-accent">Pincode 110024</span>
           </h1>
           <p className="text-light-navy/60 text-sm sm:text-base lg:text-lg max-w-2xl leading-relaxed">
-            Official Delhi Government circle rates for 110024 — Lajpat Nagar, Defence Colony, and surrounding localities. Rates as per latest notification.
+            Official Delhi Government circle rates for 110024, Lajpat Nagar, Defence Colony, and surrounding localities. Rates as per latest notification.
           </p>
         </div>
       </section>

@@ -20,7 +20,7 @@ export function StoryOf110024() {
             The 110024.com story is forged by a 50+ year old legacy, driven by 3 generations of real estate pioneers and industry leaders: <span className="text-gold-accent font-semibold">The Saxenas</span>.
           </p>
           <p>
-            Since late 1960&apos;s, we&apos;ve done more than just watch pincode 110024 grow — we were here, charting every new lane, seeing the first foundations laid, and tracking the growth of every block.
+            Since late 1960&apos;s, we&apos;ve done more than just watch pincode 110024 grow, we were here, charting every new lane, seeing the first foundations laid, and tracking the growth of every block.
           </p>
           <p>
             This deep, hands-on history means we hold the inherent, true knowledge required to assess the potential and value of every property you consider. To put this in simple words: we know this market better than anyone else, because we built its history.
@@ -37,7 +37,7 @@ export function StoryOf110024() {
             Why The Name - <span className="text-gold-accent">110024.com?</span>
           </h3>
           <p className="text-light-navy/70 text-sm sm:text-[15px] leading-[1.9] text-justify">
-            110024.com is a name which has been decided and kept with only one feeling, and that is inherent love for the area where we grew up, where we studied, where we played, where we learnt — in short, where we belong to. We couldn&apos;t get a better brand name than this as we truly felt that <span className="text-gold-accent font-semibold">&ldquo;Yeh Jagah Humaari – Aur Hum Iss Jagah Ke.&rdquo;</span> We proudly and loudly say, <span className="text-gold-accent font-semibold">110024 – Yaani Hum!</span>
+            110024.com is a name which has been decided and kept with only one feeling, and that is inherent love for the area where we grew up, where we studied, where we played, where we learnt, in short, where we belong to. We couldn&apos;t get a better brand name than this as we truly felt that <span className="text-gold-accent font-semibold">&ldquo;Yeh Jagah Humaari – Aur Hum Iss Jagah Ke.&rdquo;</span> We proudly and loudly say, <span className="text-gold-accent font-semibold">110024 – Yaani Hum!</span>
           </p>
         </div>
       </div>

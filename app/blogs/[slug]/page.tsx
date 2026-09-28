@@ -45,6 +45,26 @@ function Block({ block }: { block: BlogBlock }) {
       </ul>
     );
   }
+  if (block.type === 'image') {
+    return (
+      <figure className="my-8 sm:my-10">
+        <div className="relative aspect-[16/10] overflow-hidden border border-border-color">
+          <Image
+            src={block.src}
+            alt={block.alt}
+            fill
+            className="object-cover"
+            referrerPolicy="no-referrer"
+          />
+        </div>
+        {block.caption && (
+          <figcaption className="mt-2.5 text-xs text-secondary-text leading-relaxed">
+            {block.caption}
+          </figcaption>
+        )}
+      </figure>
+    );
+  }
   if (block.type === 'quote') {
     return (
       <blockquote className="my-8 sm:my-10 border-l-4 border-gold-accent bg-light-navy/50 px-5 sm:px-7 py-5 sm:py-6">
@@ -131,7 +151,7 @@ export default async function BlogPage({
               Buying or selling in 110024?
             </h3>
             <p className="text-light-navy/60 text-sm mb-5 leading-relaxed">
-              Get hyperlocal advice on pricing, paperwork and negotiation — free, no obligation.
+              Get hyperlocal advice on pricing, paperwork and negotiation, free, no obligation.
             </p>
             <Link
               href="/exclusive-deals"

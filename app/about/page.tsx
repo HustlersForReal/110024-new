@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const values = [
   { icon: Shield, title: 'Trust & Integrity', desc: '50+ years of legacy built on transparency and honest dealings.' },
-  { icon: TrendingUp, title: 'Hyperlocal Expertise', desc: 'Deep knowledge of 110024 — from bylaws to hidden opportunities.' },
+  { icon: TrendingUp, title: 'Hyperlocal Expertise', desc: 'Deep knowledge of 110024, from bylaws to hidden opportunities.' },
   { icon: Handshake, title: 'End-to-End Service', desc: 'One platform for buying, selling, renting, and documentation.' },
   { icon: Users, title: '100+ Experts', desc: 'A team spanning real estate, legal, liaisoning, and property management.' },
 ];
@@ -71,7 +71,7 @@ export default function AboutPage() {
                   The 110024.com story is forged by a 50+ year old legacy, driven by 3 generations of real estate pioneers and industry leaders: <span className="text-gold-accent font-semibold">The Saxenas</span>.
                 </p>
                 <p>
-                  Since the late 1960s, we have done more than just watch pincode 110024 grow — we were here, charting every new lane, seeing the first foundations laid, and tracking the growth of every block.
+                  Since the late 1960s, we have done more than just watch pincode 110024 grow, we were here, charting every new lane, seeing the first foundations laid, and tracking the growth of every block.
                 </p>
                 <p>
                   This deep, hands-on history means we hold the inherent, true knowledge required to assess the potential and value of every property you consider. We know this market better than anyone else, because we built its history.
@@ -119,7 +119,7 @@ export default function AboutPage() {
               Making Every Deal Stress-Free & Complete
             </h2>
             <p className="text-secondary-text text-sm sm:text-base leading-relaxed text-justify">
-              Our goal is to make your real estate deal not only stress-free but also complete, ensuring no legal flaw is left or created in the process. We don&apos;t follow a one-size-fits-all approach — instead, we carve and plan every case according to its unique requirements.
+              Our goal is to make your real estate deal not only stress-free but also complete, ensuring no legal flaw is left or created in the process. We don&apos;t follow a one-size-fits-all approach, instead, we carve and plan every case according to its unique requirements.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
@@ -190,7 +190,7 @@ export default function AboutPage() {
             Ready to Explore 110024?
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-light-navy/60 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
-            Whether you&apos;re buying, selling, renting, or investing — discover the right property with hyperlocal expertise.
+            Whether you&apos;re buying, selling, renting, or investing, discover the right property with hyperlocal expertise.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
             <Link href="/" className="inline-flex items-center justify-center gap-2 bg-gold-accent text-primary-navy hover:bg-white px-8 sm:px-10 py-3.5 sm:py-4 text-sm font-semibold uppercase tracking-wider transition-all duration-300">

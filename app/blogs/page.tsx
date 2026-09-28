@@ -6,7 +6,7 @@ import { blogs } from '@/lib/blogs';
 
 export const metadata: Metadata = {
   title: 'Blogs & Insights - 110024.com',
-  description: 'Market trends, locality guides and buying advice for Pincode 110024 — Defence Colony, Lajpat Nagar and South Delhi.',
+  description: 'Market trends, locality guides and buying advice for Pincode 110024, Defence Colony, Lajpat Nagar and South Delhi.',
 };
 
 export default function BlogsPage() {

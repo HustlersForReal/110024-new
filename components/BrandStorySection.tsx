@@ -20,7 +20,7 @@ export function BrandStorySection() {
           {site.quote.charAt(0) + site.quote.slice(1).toLowerCase()}
         </h2>
         <p className="font-sans text-sm sm:text-base text-secondary-text max-w-2xl mx-auto mb-8">
-          {site.name} is 110024&apos;s hyperlocal real-estate marketplace — from Lajpat Nagar to Defence Colony,
+          {site.name} is 110024&apos;s hyperlocal real-estate marketplace, from Lajpat Nagar to Defence Colony,
           Amar Colony to Vikram Vihar. Everything you need to discover, understand, and transact property
           in South Delhi, all in one place.
         </p>

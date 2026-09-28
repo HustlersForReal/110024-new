@@ -256,7 +256,7 @@ export function FooterFinal({
               <p className="text-center">
                 <span className="font-bold text-primary-navy">Property Baap</span> is not another quirky brand name chosen to create a periodic buzz in the real estate market. It is a well-thought-out name, carrying a deliberate meaning and an immense opportunity within itself.
               </p>
-              <p className="text-center font-bold uppercase tracking-[0.12em] text-primary">Spare Two Minutes To Know — How?</p>
+              <p className="text-center font-bold uppercase tracking-[0.12em] text-primary">Spare Two Minutes To Know: How?</p>
               <button
                 type="button"
                 onClick={() => setStoryExpanded(!storyExpanded)}
@@ -280,16 +280,16 @@ export function FooterFinal({
                     <p>When you get nothing, you are obliged to find something. And that something, if done right, can get you everything. Whether you find the luck or the luck finds you, <span className="font-bold text-primary-navy">SUCCESS IS ALL THAT MATTERS.</span></p>
                     <h3 className="pt-4 text-center font-sans text-[17px] font-black uppercase tracking-[0.08em] text-primary-navy sm:text-[19px]">Done Hain</h3>
                     <p>When a query comes to us, we are psychologically prepared and trained to believe we will be able to handle, execute &amp; accomplish it and never discard it because it is small, irrelevant or seemingly less profitable.</p>
-                    <p className="flex items-center justify-center gap-2 text-center font-bold text-primary">In our Mind It Is Already — Done Hain <CheckCircle2 className="h-5 w-5 text-primary" /></p>
+                    <p className="flex items-center justify-center gap-2 text-center font-bold text-primary">In our Mind It Is Already: Done Hain <CheckCircle2 className="h-5 w-5 text-primary" /></p>
                     <p>We see it as: <span className="font-bold text-primary">An opportunity to learn. An opportunity to solve. An opportunity to start a new journey,</span> with someone we already know or someone we have just met.</p>
                     <p>We don&apos;t claim to do wonders. But we do assure you of <span className="font-bold text-primary">saving you from blunders.</span></p>
-                    <h3 className="pt-6 text-center font-serif text-xl font-black text-primary-navy sm:text-2xl">Property Baap — The Meaning</h3>
+                    <h3 className="pt-6 text-center font-serif text-xl font-black text-primary-navy sm:text-2xl">Property Baap: The Meaning</h3>
                     <p>A father is not merely someone who commands the utmost respect. A father inherently carries the utmost responsibility. He provides an answer to your every question, no matter how silly it may seem, and searches for a solution to your every problem. Sometimes he gives you exactly what you want. Sometimes he tells you what is right and practical. A father is, in many ways, our one-stop solution provider in any given situation.</p>
                     <p className="text-center font-bold text-primary">That is what Property Baap means to us.</p>
                     <p>We at Property Baap are built on the same principle: <span className="font-bold text-primary-navy">Providing righteous guidance and dependable service across everything related to property.</span></p>
-                    <h3 className="pt-6 text-center font-serif text-xl font-black text-primary-navy sm:text-2xl">Property Baap — The Opportunity</h3>
+                    <h3 className="pt-6 text-center font-serif text-xl font-black text-primary-navy sm:text-2xl">Property Baap: The Opportunity</h3>
                     <p>Property Baap is constituted on the principle of serving the masses, in association with people from every section of society. We work with everyone, from an industrialist to a delivery partner. <span className="font-bold text-primary">Because property affects everyone.</span> We take the pain together. We gain together. And that is where our opportunity becomes everyone&apos;s opportunity.</p>
-                    <p>If you relate to our story, reach out to us — as a client, as a professional partner, or simply by joining our <span className="font-bold text-primary">#HarGharDealer</span> movement. Because the opportunity should not depend on who you are or what you do. <span className="font-bold text-primary-navy">It should depend on what you can bring to the table.</span></p>
+                    <p>If you relate to our story, reach out to us, as a client, as a professional partner, or simply by joining our <span className="font-bold text-primary">#HarGharDealer</span> movement. Because the opportunity should not depend on who you are or what you do. <span className="font-bold text-primary-navy">It should depend on what you can bring to the table.</span></p>
                   </div>
                 </div>
               </div>

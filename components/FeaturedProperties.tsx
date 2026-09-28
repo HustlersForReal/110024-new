@@ -38,8 +38,8 @@ function DemandCard({ demand, index }: { demand: LiveDemand; index: number }) {
   const messageLines = [
     'Hello 110024.com, I am interested in this property.',
     '',
-    `Size: ${demand.size || '—'}`,
-    `Config: ${config || '—'}`,
+    `Size: ${demand.size || '-'}`,
+    `Config: ${config || '-'}`,
     `Type: ${demand.kind}${demand.outright ? ' (Outright)' : ''}`,
     `Location: ${demand.location}${demand.block ? `, ${demand.block}` : ''}, 110024`,
     demand.tags.length > 0 ? `Highlights: ${demand.tags.join(', ')}` : '',
@@ -134,7 +134,7 @@ export function FeaturedProperties() {
   const maxIndex = Math.max(0, visible.length - perView);
 
   // Ref mirrors the index synchronously so autoplay always advances from the
-  // latest position — including a manual dot/arrow pick (no stale state).
+  // latest position: including a manual dot/arrow pick (no stale state).
   // resumeKey restarts the autoplay dwell timer on every manual interaction.
   const indexRef = useRef(0);
   const [resumeKey, setResumeKey] = useState(0);
@@ -193,7 +193,7 @@ export function FeaturedProperties() {
               Available Properties Right Now
             </h2>
             <p className="text-secondary-text text-base sm:text-lg">
-              Handpicked properties currently available across Pincode 110024. Found your match? Click the "I Am Interested" button to get in touch.
+              100% verified properties that are deeply vetted by the team of most experienced property experts of Lajpat Nagar and Defence Colony
             </p>
           </div>
           <div className="flex gap-2 shrink-0">

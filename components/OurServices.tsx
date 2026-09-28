@@ -82,7 +82,7 @@ export function OurServices() {
             Explore Our Services
           </h3>
           <p className="text-secondary-text text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 max-w-3xl">
-            Professional services for every step of your property journey — documentation, liaisoning and beyond.
+            Professional services for every step of your property journey, documentation, liaisoning and beyond.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
             {services.map((service) => (

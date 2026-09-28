@@ -16,7 +16,7 @@ const whyList = [
   {
     icon: TrendingUp,
     title: 'Best Market Price',
-    desc: 'Our hyperlocal expertise ensures your property is priced right — not too low, not too high.',
+    desc: 'Our hyperlocal expertise ensures your property is priced right, not too low, not too high.',
   },
   {
     icon: Shield,
@@ -26,12 +26,12 @@ const whyList = [
   {
     icon: Eye,
     title: 'Maximum Visibility',
-    desc: 'Featured placement on 110024.com — the go-to portal for anyone looking in this pincode.',
+    desc: 'Featured placement on 110024.com, the go-to portal for anyone looking in this pincode.',
   },
   {
     icon: Handshake,
     title: 'End-to-End Support',
-    desc: 'From listing to registration — we handle paperwork, negotiation, and closing.',
+    desc: 'From listing to registration, we handle paperwork, negotiation, and closing.',
   },
   {
     icon: BarChart3,
@@ -41,10 +41,10 @@ const whyList = [
 ];
 
 const steps = [
-  { step: '01', title: 'Share Your Property', desc: 'Fill the form with your property details — type, location, and expected price.' },
+  { step: '01', title: 'Share Your Property', desc: 'Fill the form with your property details, type, location, and expected price.' },
   { step: '02', title: 'We Verify & List', desc: 'Our team verifies the details, takes photos, and creates a premium listing.' },
   { step: '03', title: 'Buyers Come to You', desc: 'Qualified buyers view your property. We facilitate showings and negotiate on your behalf.' },
-  { step: '04', title: 'Deal Closed', desc: 'From agreement to registration — we manage the entire closing process.' },
+  { step: '04', title: 'Deal Closed', desc: 'From agreement to registration, we manage the entire closing process.' },
 ];
 
 export default function ListYourPropertyPage() {
@@ -70,7 +70,7 @@ export default function ListYourPropertyPage() {
       <section className="py-14 sm:py-20 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-12 lg:gap-16">
-            {/* Form — first on mobile, right on desktop */}
+            {/* Form:  first on mobile, right on desktop */}
             <div className="lg:col-span-5 lg:order-2 order-1">
               <div className="bg-primary-navy text-white p-6 sm:p-8 lg:sticky lg:top-24">
                 <h2 className="text-xl sm:text-2xl font-bold mb-2">List Your Property</h2>
@@ -79,7 +79,7 @@ export default function ListYourPropertyPage() {
               </div>
             </div>
 
-            {/* Info — second on mobile, left on desktop */}
+            {/* Info:  second on mobile, left on desktop */}
             <div className="lg:col-span-7 lg:order-1 order-2">
               {/* Why List */}
               <span className="text-gold-accent font-semibold tracking-widest uppercase text-[11px] sm:text-xs mb-3 sm:mb-4 block">
@@ -129,7 +129,7 @@ export default function ListYourPropertyPage() {
                 <div className="space-y-3">
                   {[
                     'Your property details stay 100% confidential',
-                    'No hidden charges — our service is free for sellers',
+                    'No hidden charges, our service is free for sellers',
                     'Direct access to pre-qualified, serious buyers',
                     'Complete support from listing to registration',
                   ].map((item, idx) => (

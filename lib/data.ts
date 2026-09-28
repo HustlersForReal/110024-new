@@ -271,7 +271,7 @@ export const areaProfiles = [
     name: "Ring Road",
     tagline: "A High-Visibility Commercial Power Zone",
     category: "roads",
-    description: "This isn't just real estate; it's the power strip where visibility is currency. It picture the former quiet bungalow lane of Lajpat Nagar part 3 & 4; dramatically facing each other across the bustling Ring Road and Flyover. This transformation has attracted giants—from Haldirams to major auto brands like Nexa, Tata, and Mahindra—all drawn by the unparalleled opportunity to be seen. This is a clear, high-performing investment for Commercial ventures only. The constant traffic noise makes it difficult for a peaceful living here, but for business, the footfall is worth every penny invested.",
+    description: "This isn't just real estate; it's the power strip where visibility is currency. It picture the former quiet bungalow lane of Lajpat Nagar part 3 & 4; dramatically facing each other across the bustling Ring Road and Flyover. This transformation has attracted giants,from Haldirams to major auto brands like Nexa, Tata, and Mahindra,all drawn by the unparalleled opportunity to be seen. This is a clear, high-performing investment for Commercial ventures only. The constant traffic noise makes it difficult for a peaceful living here, but for business, the footfall is worth every penny invested.",
     suggestedInvestment: "Recommended to invest in commercial buildings to be leased to big brands."
   },
   {
@@ -303,7 +303,7 @@ export const areaProfiles = [
     name: "Dayanand Colony",
     tagline: "Affordable Residential Living And Economical Commercial Space",
     category: "residential",
-    description: "Dayanand Colony has a wonderful, established community feel, making it a favorite among middle-to-upper-middle-class families. It strikes a perfect balance: you get convenient access to the main markets and transport links, yet the neighborhood itself serves as a secure, quiet respite—a truly reliable choice for residential stability and economical business set up.",
+    description: "Dayanand Colony has a wonderful, established community feel, making it a favorite among middle-to-upper-middle-class families. It strikes a perfect balance: you get convenient access to the main markets and transport links, yet the neighborhood itself serves as a secure, quiet respite,a truly reliable choice for residential stability and economical business set up.",
     suggestedInvestment: "Recommended to invest in affordable residence and budget friendly commercial spaces."
   },
   {
@@ -335,7 +335,7 @@ export const areaProfiles = [
     name: "Vinoba Puri",
     tagline: "Well-Connected, Peaceful Residential Hub",
     category: "residential",
-    description: "A strategically located residential sub-colony of Lajpat Nagar 2 that proudly boasts its own Vinoba Puri Metro Station. It offers good residential housing with parks and full facilities and benefits from being very close to the Ring Road. Its appeal is its perfect positioning—it is walking distance from the Central Market for convenience, yet distant enough to avoid the market's noise and buzz. It's excellent for Residential investors looking for a peaceful home base that still offers high-end convenience without the city's noise and chaos.",
+    description: "A strategically located residential sub-colony of Lajpat Nagar 2 that proudly boasts its own Vinoba Puri Metro Station. It offers good residential housing with parks and full facilities and benefits from being very close to the Ring Road. Its appeal is its perfect positioning,it is walking distance from the Central Market for convenience, yet distant enough to avoid the market's noise and buzz. It's excellent for Residential investors looking for a peaceful home base that still offers high-end convenience without the city's noise and chaos.",
     suggestedInvestment: "Recommended to invest in residential properties for a peaceful living with no major commercial establishment."
   },
   {
@@ -375,7 +375,7 @@ export const areaProfiles = [
     name: "3C's Mall",
     tagline: "Competent Cine Court",
     category: "markets",
-    description: "If you want to be at the center of the action, this is it—the beating heart of entertainment and premium retail in Lajpat Nagar 2. It is located right next to the Lajpat Nagar police station. It houses a state-of-the-art PVR Cinemax, a lively food court, and several high-end retail brands. Properties here almost never come up for sale, confirming its status as a gold standard asset; therefore, securing a lease opportunity here is extremely competitive.",
+    description: "If you want to be at the center of the action, this is it,the beating heart of entertainment and premium retail in Lajpat Nagar 2. It is located right next to the Lajpat Nagar police station. It houses a state-of-the-art PVR Cinemax, a lively food court, and several high-end retail brands. Properties here almost never come up for sale, confirming its status as a gold standard asset; therefore, securing a lease opportunity here is extremely competitive.",
     suggestedInvestment: "Recommended to invest commercially for very high rental yield due to high footfall."
   },
   {
@@ -391,7 +391,7 @@ export const areaProfiles = [
     name: "Krishna Market",
     tagline: "Affordable Daily Market Hub",
     category: "markets",
-    description: "This is the neighborhood's essential lifeline—a market famous for being very reasonably priced. It serves the daily needs of Lajpat Nagar 1 residents, but its reputation extends wider as a reliable spot for finding many daily utility items at wholesale prices. It anchors the commercial appeal of Lajpat Nagar 1, making it a great location for stable Commercial Investment due to consistent high footfall and local demand.",
+    description: "This is the neighborhood's essential lifeline,a market famous for being very reasonably priced. It serves the daily needs of Lajpat Nagar 1 residents, but its reputation extends wider as a reliable spot for finding many daily utility items at wholesale prices. It anchors the commercial appeal of Lajpat Nagar 1, making it a great location for stable Commercial Investment due to consistent high footfall and local demand.",
     suggestedInvestment: "Recommended to invest commercially in highly demanded small shops that gives a high rental income & good returns on reselling."
   },
   {
@@ -584,9 +584,9 @@ export const investmentReasons = [
   { title: "Schools & Healthcare", desc: "Proximity to top-tier educational institutions and hospitals." },
   { title: "Long-term Investment", desc: "Historically proven capital appreciation and stable rental yields." },
   { title: "All Ages, All Seasons", desc: "Playfulness for children, mindfulness for teenagers, vibrancy for youngsters, and peacefulness for the elderly." },
-  { title: "Every Facility, At Your Door", desc: "Wide roads, cleanliness, dense parks, and reliable connectivity — the basics are always covered." },
-  { title: "Metro, Schools & Markets", desc: "Metro stations, top schools, leading hospitals, restaurants, and bustling markets — everything nearby." },
-  { title: "More Than Home — An Achievement", desc: "Owning a property here gives comfort, guarantees higher returns, and secures your financial future." }
+  { title: "Every Facility, At Your Door", desc: "Wide roads, cleanliness, dense parks, and reliable connectivity, the basics are always covered." },
+  { title: "Metro, Schools & Markets", desc: "Metro stations, top schools, leading hospitals, restaurants, and bustling markets, everything nearby." },
+  { title: "More Than Home: An Achievement", desc: "Owning a property here gives comfort, guarantees higher returns, and secures your financial future." }
 ];
 
 export const articles = [

@@ -24,6 +24,20 @@ body {
   color: var(--color-primary-text);
 }
 
+/* Smooth scrolling for in-page anchors, e.g. the hero's "Special Offers" and
+   "Special Services" chips jumping to /#one-stop-shop and /#services.
+   Sections that are anchor targets carry scroll-mt-* so the sticky navbar
+   does not cover their heading. */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 /* Hide Scrollbar */
 ::-webkit-scrollbar {
   display: none;
@@ -56,9 +70,30 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-marquee {
+  .animate-marquee,
+  .animate-menu-in {
     animation: none;
   }
+}
+
+/* Leaflet map, keep below navbar/dropdowns.
+   Leaflet paints its panes at z-index 400-1000, which would otherwise sit
+   above the sticky Navbar and every dropdown on the page. */
+.leaflet-container,
+.leaflet-pane,
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 0 !important;
+}
+
+/* Mobile nav "Explore" accordion */
+@keyframes menu-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-menu-in {
+  animation: menu-in 0.15s ease-out both;
 }
 
 /* Referral welcome popup entry animation */

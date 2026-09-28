@@ -1,3 +1,9 @@
+'use client';
+
+import Link from 'next/link';
+import { MessageCircle } from 'lucide-react';
+import { site } from '@/lib/site';
+
 export function FinalCTA() {
   return (
     <section className="py-16 sm:py-20 md:py-28 bg-primary-navy text-center relative overflow-hidden">
@@ -11,15 +17,24 @@ export function FinalCTA() {
           Looking for Property in 110024?
         </h2>
         <p className="text-base sm:text-lg md:text-xl text-light-navy/60 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
-          Whether you&apos;re buying, selling, renting or investing, discover the right property with hyperlocal expertise.
+          Whether you&apos;re buying, selling or renting, discover the right property with hyperlocal expertise.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
-          <button className="bg-gold-accent text-primary-navy hover:bg-white px-8 sm:px-10 py-3.5 sm:py-4 text-sm font-semibold uppercase tracking-wider transition-all duration-300">
+          <Link
+            href="/#live-demand"
+            className="inline-flex items-center justify-center gap-2 bg-gold-accent text-primary-navy hover:bg-white px-8 sm:px-10 py-3.5 sm:py-4 text-sm font-semibold uppercase tracking-wider transition-all duration-300"
+          >
             Explore Properties
-          </button>
-          <button className="bg-transparent border-2 border-white/20 text-white hover:border-white/40 hover:bg-white/5 px-8 sm:px-10 py-3.5 sm:py-4 text-sm font-semibold uppercase tracking-wider transition-all duration-300">
+          </Link>
+          <a
+            href={site.whatsapp('Hello 110024.com, I would like to talk to an expert about property in 110024.')}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white/20 text-white hover:border-white/40 hover:bg-white/5 px-8 sm:px-10 py-3.5 sm:py-4 text-sm font-semibold uppercase tracking-wider transition-all duration-300"
+          >
+            <MessageCircle className="w-4 h-4" />
             Talk to an Expert
-          </button>
+          </a>
         </div>
       </div>
     </section>
