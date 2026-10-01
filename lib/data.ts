@@ -464,7 +464,7 @@ export const servicesData = [
   },
   {
     slug: "authority-connection",
-    title: "I Need MCD, DDA & Govt. Approvals",
+    title: "I Need MCD, L&DO & Govt. Approvals",
     description: "NOCs, approvals and paperwork across MCD, DDA, sub-registrar office and L&DO.",
     icon: "Landmark",
     message: "I need help with MCD, DDA and government approvals",

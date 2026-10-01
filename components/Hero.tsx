@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
-import { Search, MapPin, Send, Plus, Briefcase, Sparkles } from 'lucide-react';
+import { Search, MapPin, Send, Plus, Briefcase, Gift } from 'lucide-react';
 import { areaProfiles } from '@/lib/data';
 import { ServicesMarquee } from './ServicesMarquee';
 
@@ -22,7 +22,7 @@ export function Hero() {
   return (
     <section className="relative w-full overflow-hidden min-h-[calc(100svh-5rem)] sm:min-h-[calc(100svh-6rem)] flex flex-col justify-between items-center pt-4 sm:pt-6 lg:pt-8 pb-0">
       <video autoPlay loop muted playsInline preload="metadata" className="absolute inset-0 w-full h-full object-cover object-center">
-        <source src="https://res.cloudinary.com/s8hu1xkw/video/upload/v1789155673/24Final-compressed_jrkppd.mp4" type="video/mp4" />
+        <source src="https://res.cloudinary.com/s8hu1xkw/video/upload/v1790839563/110024-Final-compressed_p8hjv1.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/80" />
       <div className="absolute inset-0 bg-primary-navy/30" />
@@ -33,6 +33,9 @@ export function Hero() {
         <Subtitle />
         <SearchSection />
         <Chips />
+        <div className="mt-7 sm:mt-9">
+          <ReferEarn />
+        </div>
       </div>
 
       <div className="relative z-10 w-full mt-auto">
@@ -304,7 +307,7 @@ function Chips() {
         onClick={() => router.push('/#one-stop-shop')}
         className="inline-flex items-center gap-1.5 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md text-white hover:text-white text-xs sm:text-sm font-medium transition-all duration-200"
       >
-        <Sparkles className="w-3.5 h-3.5" />
+        <Gift className="w-3.5 h-3.5" />
         Special Offers
       </button>
       {/* Scrolls to the "Actions Speaks Louder Than Words" section. */}
@@ -314,6 +317,32 @@ function Chips() {
       >
         <Briefcase className="w-3.5 h-3.5" />
         Special Services
+      </button>
+    </div>
+  );
+}
+
+function ReferEarn() {
+  const router = useRouter();
+  const [grown, setGrown] = useState(false);
+
+  // Grows as the visitor scrolls past the hero.
+  useEffect(() => {
+    const onScroll = () => setGrown(window.scrollY > 60);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  return (
+    <div className="flex justify-center max-w-full px-1">
+      <button
+        onClick={() => router.push('/#referral-section')}
+        className={`refer-earn font-bold uppercase tracking-[0.15em] whitespace-nowrap underline decoration-2 underline-offset-[6px] sm:underline-offset-8 hover:underline-offset-[10px] transition-all duration-500 ease-out ${
+          grown ? 'text-xl sm:text-2xl' : 'text-base sm:text-lg'
+        }`}
+      >
+        Refer &amp; Earn
       </button>
     </div>
   );

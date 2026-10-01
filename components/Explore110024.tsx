@@ -105,6 +105,19 @@ export function Explore110024() {
             </div>
           </div>
         </div>
+
+        <div className="mt-10 sm:mt-14">
+          <div className="overflow-hidden rounded-xl border border-border-color shadow-sm">
+            <iframe
+              title="Map of Pincode 110024"
+              src="https://maps.google.com/maps?q=110024&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              className="w-full h-[300px] sm:h-[420px] border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

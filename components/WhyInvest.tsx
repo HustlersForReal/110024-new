@@ -7,7 +7,7 @@ export function WhyInvest() {
         <div className="max-w-2xl mb-10 sm:mb-14">
           <span className="text-gold-accent font-semibold tracking-widest uppercase text-[11px] sm:text-xs mb-3 sm:mb-4 block">Investment</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary-navy mb-3 sm:mb-4 tracking-tight">
-            Why Invest in 110024?
+            Why Invest in Pincode 110024?
           </h2>
           <p className="text-secondary-text text-base sm:text-lg">
             Strong fundamentals make this South Delhi pincode a highly sought-after destination for homebuyers and investors.

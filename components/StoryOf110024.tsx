@@ -8,7 +8,6 @@ export function StoryOf110024() {
       </div>
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <span className="text-gold-accent font-semibold tracking-widest uppercase text-[11px] sm:text-xs mb-4 sm:mb-5 block">Our Heritage</span>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-[1.1] tracking-tight">
           The Story Behind 110024.com
         </h2>

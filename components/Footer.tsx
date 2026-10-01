@@ -136,7 +136,7 @@ export function FooterFinal({
               <input
                 required
                 type="text"
-                placeholder="Your name"
+                placeholder="Your name *"
                 value={contactForm.name}
                 onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
                 aria-invalid={Boolean(contactErrors.name)}
@@ -146,7 +146,7 @@ export function FooterFinal({
               <input
                 required
                 type="tel"
-                placeholder="Phone number"
+                placeholder="Phone number *"
                 value={contactForm.phone}
                 onChange={(e) => setContactForm({ ...contactForm, phone: e.target.value })}
                 aria-invalid={Boolean(contactErrors.phone)}
@@ -156,7 +156,7 @@ export function FooterFinal({
               <textarea
                 required
                 rows={3}
-                placeholder="How can we help?"
+                placeholder="How can we help? *"
                 value={contactForm.message}
                 onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
                 aria-invalid={Boolean(contactErrors.message)}
@@ -171,7 +171,7 @@ export function FooterFinal({
         </section>
 
         {/* ── 1 Call Challenge ── */}
-        <div className="py-8 sm:py-12 bg-white text-center relative overflow-hidden border-b border-primary/10">
+        <div id="one-call-challenge" className="py-8 sm:py-12 bg-white text-center relative overflow-hidden border-b border-primary/10 scroll-mt-20">
           <div className="max-w-4xl mx-auto px-4">
             <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5 sm:mb-6">
               <PhoneCall className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
@@ -437,6 +437,7 @@ export function FooterFinal({
               <a href="/list-your-property" className="font-sans text-muted hover:text-primary text-xs sm:text-sm font-medium transition-colors">List Your Property</a>
               <a href="/circle-rates" className="font-sans text-muted hover:text-primary text-xs sm:text-sm font-medium transition-colors">Circle Rates</a>
               <a href="/exclusive-deals" className="font-sans text-muted hover:text-primary text-xs sm:text-sm font-medium transition-colors">Exclusive Deals</a>
+              <a href="/origin-and-story" className="font-sans text-muted hover:text-primary text-xs sm:text-sm font-medium transition-colors">Our Story</a>
               <a href="/about" className="font-sans text-muted hover:text-primary text-xs sm:text-sm font-medium transition-colors">About Us</a>
             </nav>
           </div>
