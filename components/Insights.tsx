@@ -4,6 +4,13 @@ import { ArrowRight } from 'lucide-react';
 import { blogs } from '@/lib/blogs';
 
 export function Insights() {
+  // The homepage shows only the 3 newest posts by date, so the section stays
+  // one row instead of growing into a wall every time blogs.ts gains an entry.
+  // /blogs still lists everything.
+  const latest = [...blogs]
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 3);
+
   return (
     <section className="py-10 sm:py-20 md:py-24 lg:py-32 bg-white overflow-x-clip">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,7 +31,7 @@ export function Insights() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-8">
-          {blogs.map((blog) => (
+          {latest.map((blog) => (
             <Link key={blog.id} href={`/blogs/${blog.slug}`} className="group cursor-pointer block min-w-0">
               <div className="relative aspect-[16/10] overflow-hidden mb-4 sm:mb-5">
                 <Image
