@@ -1,11 +1,14 @@
 import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import { ArrowRight, Shield, Eye, Handshake } from 'lucide-react';
 import { ExclusiveDealsForm } from './form';
 
-export const metadata: Metadata = {
-  title: 'Exclusive Deals - 110024.com',
-  description: 'Share your property requirements with 110024.com. We work with all our might to give you the best practical solution based on logic and facts.',
-};
+export const metadata: Metadata = pageMetadata({
+  title: 'Exclusive Deals',
+  description:
+    'Share your property requirements with 110024.com. We work with all our might to give you the best practical solution based on logic and facts.',
+  path: '/exclusive-deals',
+});
 
 export default function ExclusiveDealsPage() {
   return (

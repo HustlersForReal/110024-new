@@ -220,7 +220,7 @@ export const allLocalitiesList = [
 export const areaProfiles = [
   {
     slug: "lajpat-nagar-1",
-    name: "Lajpat Nagar 1",
+    name: "Lajpat Nagar 1 (Block A - I)",
     tagline: "Global Community, Local Opportunity",
     category: "residential",
     description: "This is a warm, affordable residential hub that attracts a truly global community, serving tenants and migrants from places like Afghanistan, Kashmir, and Nigeria. Beyond its residential blocks, it is a major commercial stop, famous for its car accessories market and a distinct used bike market in the A & B Block area. The entire section is highly accessible via Jal Vihar Road.",
@@ -228,7 +228,7 @@ export const areaProfiles = [
   },
   {
     slug: "lajpat-nagar-2",
-    name: "Lajpat Nagar 2",
+    name: "Lajpat Nagar 2 (Block A - O)",
     tagline: "Value Housing Near Prime Market",
     category: "residential",
     description: "If you thrive on being at the epicenter of business and upscale living, this is your address. Famous for the Central Market, this area is a premium residential zone occupied by business people and well-earners, reflected in the upscale property prices. Our properties here are an investment in maximum centrality and convenience.",
@@ -236,7 +236,7 @@ export const areaProfiles = [
   },
   {
     slug: "lajpat-nagar-3",
-    name: "Lajpat Nagar 3",
+    name: "Lajpat Nagar 3 (Block A - M)",
     tagline: "A Prestigious Residential Address",
     category: "residential",
     description: "This enclave exudes luxury with a strictly residential look. It is the preferred home for business owners and NRIs, and famously hosts the private offices of high-ranking professionals like doctors, engineers, chartered accountants, and lawyers. This highly exclusive atmosphere guarantees peace and privacy with direct connectivity to the ring road.",
@@ -252,7 +252,7 @@ export const areaProfiles = [
   },
   {
     slug: "defence-colony",
-    name: "Defence Colony",
+    name: "Defence Colony (Block A - E)",
     tagline: "A Class Away From The Mass",
     category: "residential",
     description: "This location is the undeniable signature of enduring prestige, primarily allocated to defence officers and army personnel during its founding. Known for its very wide roads and well-structured buildings, it is occupied by business people, high-rank professionals, and NRIs. The renowned C Block Market and the flyover food joints are hotspots, alongside major fashion house brands. This is where opportunity meets prestige. It's the perfect asset class for investors seeking sheer residential luxury and the exclusivity that comes with it.",
@@ -292,7 +292,7 @@ export const areaProfiles = [
   },
   {
     slug: "amar-colony",
-    name: "Amar Colony",
+    name: "Amar Colony (Block A - E)",
     tagline: "The Perfect Example Of Mixed Land Use",
     category: "residential",
     description: "This is one of the most well known locality of Lajpat Nagar 4. It is used massively in dual manner for both residential and commercial purposes. The biggest plus point for this locality is optimal parking space which in some blocks is as large as the plot size itself.",
@@ -300,7 +300,7 @@ export const areaProfiles = [
   },
   {
     slug: "dayanand-colony",
-    name: "Dayanand Colony",
+    name: "Dayanand Colony (Block A - C)",
     tagline: "Affordable Residential Living And Economical Commercial Space",
     category: "residential",
     description: "Dayanand Colony has a wonderful, established community feel, making it a favorite among middle-to-upper-middle-class families. It strikes a perfect balance: you get convenient access to the main markets and transport links, yet the neighborhood itself serves as a secure, quiet respite,a truly reliable choice for residential stability and economical business set up.",

@@ -1,12 +1,15 @@
 import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import Link from 'next/link';
 import { ArrowRight, Target, Users, Award, Shield, TrendingUp, Handshake, CheckCircle2 } from 'lucide-react';
 import { WhatsAppLink } from '@/components/WhatsAppLink';
 
-export const metadata: Metadata = {
-  title: 'About Us - 110024.com',
-  description: 'Built on Heritage, Driven by Expertise in 110024. A team of real estate professionals with over 50 years of sacred knowledge.',
-};
+export const metadata: Metadata = pageMetadata({
+  title: 'About Us',
+  description:
+    'Built on heritage, driven by expertise in 110024. The team behind 110024.com and how we work for Lajpat Nagar and Defence Colony owners, buyers and landlords.',
+  path: '/about',
+});
 
 const values = [
   { icon: Shield, title: 'Trust & Integrity', desc: '50+ years of legacy built on transparency and honest dealings.' },

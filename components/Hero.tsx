@@ -20,8 +20,11 @@ const quickFilters: never[] = [];
 
 export function Hero() {
   return (
-    <section className="relative w-full overflow-hidden min-h-[calc(100svh-5rem)] sm:min-h-[calc(100svh-6rem)] flex flex-col justify-between items-center pt-4 sm:pt-6 lg:pt-8 pb-0">
-      <video autoPlay loop muted playsInline preload="metadata" className="absolute inset-0 w-full h-full object-cover object-center">
+    /* Header now carries TopBenefitsMarquee, so it is 7.5rem tall below lg and
+       8.5rem at lg. min-h matches so header + hero still fill exactly one
+       screen instead of overflowing it by the marquee's height. */
+    <section className="relative w-full overflow-hidden min-h-[calc(100svh-7.5rem)] sm:min-h-[calc(100svh-7.5rem)] lg:min-h-[calc(100svh-8.5rem)] flex flex-col justify-between items-center pt-4 sm:pt-6 lg:pt-8 pb-0">
+      <video autoPlay loop muted playsInline preload="metadata" poster="https://res.cloudinary.com/s8hu1xkw/video/upload/so_0/110024-Final-compressed_p8hjv1.jpg" className="absolute inset-0 w-full h-full object-cover object-center">
         <source src="https://res.cloudinary.com/s8hu1xkw/video/upload/v1790839563/110024-Final-compressed_p8hjv1.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/80" />

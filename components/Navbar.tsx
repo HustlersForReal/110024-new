@@ -7,16 +7,28 @@ import { ChevronDown, Menu, X, Home, MapPin, Plus, BarChart3, Star, Info, Camera
 import { areaProfiles } from '@/lib/data';
 import { site } from '@/lib/site';
 import { WhatsAppLink } from './WhatsAppLink';
+import { TopBenefitsMarquee } from './TopBenefitsMarquee';
 
 export function Navbar() {
   const [exploreOpen, setExploreOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExplore, setMobileExplore] = useState(false);
+  // Collapses the benefits strip once scrolled, so the sticky header compacts.
+  // The drawer offset reads this too, otherwise it would leave a gap where the
+  // strip used to be.
+  const [scrolled, setScrolled] = useState(false);
 
   const closeMenu = () => {
     setMobileOpen(false);
     setMobileExplore(false);
   };
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   // Lock scroll only while the drawer is open on small screens, and always
   // release it again (Escape, backdrop, link tap, or growing past `lg`).
@@ -100,6 +112,8 @@ export function Navbar() {
             </button>
           </div>
         </div>
+
+        <TopBenefitsMarquee collapsed={scrolled} />
       </header>
 
       {/* Overlay + Drawer: full width, top-down */}
@@ -113,7 +127,7 @@ export function Navbar() {
           role="dialog"
           aria-modal="true"
           aria-label="Menu"
-          className={`absolute top-[4.5rem] sm:top-20 lg:top-24 left-0 right-0 bottom-0 bg-white shadow-2xl overflow-y-auto overscroll-contain transition-transform duration-300 ease-out ${mobileOpen ? 'translate-y-0' : '-translate-y-full'}`}
+          className={`absolute ${scrolled ? 'top-[4.5rem] sm:top-20' : 'top-[7.5rem]'} left-0 right-0 bottom-0 bg-white shadow-2xl overflow-y-auto overscroll-contain transition-transform duration-300 ease-out ${mobileOpen ? 'translate-y-0' : '-translate-y-full'}`}
         >
           <nav className="px-3 py-4 pb-[max(1rem,env(safe-area-inset-bottom))] space-y-1">
             <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-3 px-3 py-3 text-sm font-semibold text-primary-navy hover:bg-light-navy rounded-xl transition-colors"><Home className="w-4 h-4 text-gold-accent" /> Home</Link>

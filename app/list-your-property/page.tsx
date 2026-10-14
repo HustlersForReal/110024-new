@@ -1,11 +1,14 @@
 import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import { ArrowRight, Shield, TrendingUp, Users, Eye, Handshake, CheckCircle2, BarChart3 } from 'lucide-react';
 import { SellerForm } from './seller-form';
 
-export const metadata: Metadata = {
-  title: 'List Your Property - 110024.com',
-  description: 'List your property for sale in 110024 with 110024.com. Reach genuine buyers across Lajpat Nagar, Defence Colony, and all of South Delhi.',
-};
+export const metadata: Metadata = pageMetadata({
+  title: 'List Your Property',
+  description:
+    'List your property for sale in 110024 with 110024.com. Reach genuine buyers across Lajpat Nagar, Defence Colony, and all of South Delhi.',
+  path: '/list-your-property',
+});
 
 const whyList = [
   {

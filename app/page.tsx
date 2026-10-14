@@ -1,3 +1,5 @@
+import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import { Hero } from '@/components/Hero';
 import { FeaturedProperties } from '@/components/FeaturedProperties';
 import { WhatIs110024 } from '@/components/WhatIs110024';
@@ -12,6 +14,13 @@ import { CalculatorsSection } from '@/components/CalculatorsSection';
 import { TrustStats } from '@/components/TrustStats';
 import { Insights } from '@/components/Insights';
 import { FinalCTA } from '@/components/FinalCTA';
+
+export const metadata: Metadata = pageMetadata({
+  title: '110024.com - The Home of Real Estate in 110024',
+  description:
+    'Buy, sell or rent property in South Delhi Pincode 110024. Verified builder floors, flats, shops and land in Lajpat Nagar, Defence Colony, Amar Colony and Central Market.',
+  path: '/',
+});
 
 export default function Home() {
   return (

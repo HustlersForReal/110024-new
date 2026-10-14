@@ -1,11 +1,14 @@
 import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import { Shield, TrendingUp, Users, MapPin, Handshake, CheckCircle2, BarChart3 } from 'lucide-react';
 import { BuyerForm } from './buyer-form';
 
-export const metadata: Metadata = {
-  title: 'Submit Your Requirement - 110024.com',
-  description: 'Looking to buy or rent in 110024? Tell us your budget, locality and configuration. We shortlist verified homes in Lajpat Nagar, Defence Colony and across South Delhi.',
-};
+export const metadata: Metadata = pageMetadata({
+  title: 'Submit Your Requirement',
+  description:
+    'Looking to buy or rent in 110024? Tell us your budget, locality and configuration. We shortlist verified homes in Lajpat Nagar and Defence Colony.',
+  path: '/submit-your-requirement',
+});
 
 const whyBuy = [
   {

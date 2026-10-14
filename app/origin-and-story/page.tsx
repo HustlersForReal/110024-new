@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import { OriginOfPincode } from '@/components/OriginOfPincode';
 import { StoryOf110024 } from '@/components/StoryOf110024';
 
-export const metadata: Metadata = {
-  title: 'Origin & Story - 110024.com',
+export const metadata: Metadata = pageMetadata({
+  title: 'Origin & Story',
   description:
     'Where pincode 110024 came from, and the story behind 110024.com. Lajpat Nagar and Defence Colony, from the Partition refugee years to today.',
-};
+  path: '/origin-and-story',
+});
 
 export default function OriginAndStoryPage() {
   return (
