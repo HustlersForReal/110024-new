@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+export const runtime = 'edge';
+
 const COOKIE = 'pb_ref';
 const MAX_AGE_SECONDS = 400 * 24 * 60 * 60; // 400 days (browser cap)
 
