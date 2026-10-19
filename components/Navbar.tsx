@@ -55,7 +55,7 @@ export function Navbar() {
   return (
     <>
       <header className="sticky top-0 z-50 w-full bg-white border-b border-border-color">
-        <div className="mx-auto max-w-7xl px-4 xs:px-5 sm:px-6 lg:px-8 h-[4.5rem] sm:h-20 lg:h-24 flex items-center justify-between gap-2">
+        <div className="mx-auto max-w-[1440px] px-4 xs:px-5 sm:px-6 lg:px-8 h-[4.5rem] sm:h-20 lg:h-24 flex items-center justify-between gap-2">
           <div className="flex items-center gap-4 sm:gap-8 min-w-0">
             <Link href="/" className="flex items-center gap-2 shrink-0">
               <Image
@@ -97,7 +97,6 @@ export function Navbar() {
               <Link href="/gallery" className="text-[13px] xl:text-sm font-semibold text-secondary-text hover:text-gold-accent transition-colors">Gallery</Link>
               <Link href="/list-your-property" className="text-[13px] xl:text-sm font-semibold text-secondary-text hover:text-gold-accent transition-colors">List Your Property</Link>
               <Link href="/exclusive-deals" className="text-[13px] xl:text-sm font-semibold text-secondary-text hover:text-gold-accent transition-colors">Exclusive Deals</Link>
-              <Link href="#property-baap" className="text-[13px] xl:text-sm font-semibold text-secondary-text hover:text-gold-accent transition-colors">All Property Services</Link>
               <Link href="/about" className="text-[13px] xl:text-sm font-semibold text-secondary-text hover:text-gold-accent transition-colors">About Us</Link>
               <div className="relative" onMouseEnter={() => setMoreOpen(true)} onMouseLeave={() => setMoreOpen(false)}>
                 <button className="flex items-center gap-1 text-[13px] xl:text-sm font-semibold text-secondary-text hover:text-gold-accent transition-colors">
@@ -115,6 +114,9 @@ export function Navbar() {
                       </Link>
                       <Link href="/mcd-booked" className="flex items-center gap-2.5 text-[13px] font-semibold text-secondary-text hover:text-gold-accent hover:bg-light-navy/60 rounded-md px-3 py-2.5 transition-all duration-150">
                         <Building2 className="w-4 h-4 text-gold-accent shrink-0" /> MCD Booked
+                      </Link>
+                      <Link href="#property-baap" className="flex items-center gap-2.5 text-[13px] font-semibold text-secondary-text hover:text-gold-accent hover:bg-light-navy/60 rounded-md px-3 py-2.5 transition-all duration-150">
+                        <Briefcase className="w-4 h-4 text-gold-accent shrink-0" /> All Property Services
                       </Link>
                     </div>
                     <div className="absolute top-0 right-10 -translate-y-1 w-3 h-3 bg-white border-l border-t border-border-color rotate-45" />
@@ -182,7 +184,6 @@ export function Navbar() {
               </div>
             )}
             <Link href="/exclusive-deals" onClick={() => setMobileOpen(false)} className="flex items-center gap-3 px-3 py-3 text-sm font-semibold text-secondary-text hover:bg-light-navy rounded-xl transition-colors"><Star className="w-4 h-4 text-gold-accent" /> Exclusive Deals</Link>
-            <Link href="#property-baap" onClick={() => setMobileOpen(false)} className="flex items-center gap-3 px-3 py-3 text-sm font-semibold text-secondary-text hover:bg-light-navy rounded-xl transition-colors"><Briefcase className="w-4 h-4 text-gold-accent" /> All Property Services</Link>
             <a href="#partner-section" onClick={closeMenu} className="flex items-center gap-3 px-3 py-3 text-sm font-semibold text-secondary-text hover:bg-light-navy rounded-xl transition-colors"><Handshake className="w-4 h-4 text-gold-accent" /> Property Baap Professional Partner</a>
             <a href="#referral-section" onClick={closeMenu} className="flex items-center gap-3 px-3 py-3 text-sm font-semibold text-secondary-text hover:bg-light-navy rounded-xl transition-colors"><Users className="w-4 h-4 text-gold-accent" /> Property Baap Referral Partner (#HarGharDealer)</a>
             <Link href="/about" onClick={() => setMobileOpen(false)} className="flex items-center gap-3 px-3 py-3 text-sm font-semibold text-secondary-text hover:bg-light-navy rounded-xl transition-colors"><Info className="w-4 h-4 text-gold-accent" /> About Us</Link>
