@@ -7,3 +7,6 @@ coverage/
 !.env.example
 assets/bgvideo.mp4
 assets/bgvideo.mp4
+
+# typescript build cache
+*.tsbuildinfo
